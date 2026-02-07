@@ -3,124 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — SpacePath</title>
+    <title>SpacePath • Privacy Policy</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 2rem; background: #0d0d0d; color: #ffffff; }
-        h1, h2, h3 { color: #f0c674; }
-        a { color: #f0c674; text-decoration: none; }
-        hr { margin: 3rem 0; border: none; border-top: 1px solid #333; }
-        section { margin-bottom: 2rem; }
+        :root {
+            color-scheme: dark;
+            --bg: #05060a;
+            --panel: #0f111a;
+            --text: #f8f9ff;
+            --muted: #9ca3c9;
+            --accent: #f0c674;
+            --accent-strong: #ffd54a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+            background: radial-gradient(circle at top, rgba(39, 52, 91, 0.35), transparent 55%), var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(5, 6, 10, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 0.25rem;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.85rem;
+            color: var(--accent);
+            padding: 0.2rem 0.75rem;
+            border: 1px solid rgba(240, 198, 116, 0.3);
+            border-radius: 999px;
+        }
+
+        .lang-switch {
+            margin-left: auto;
+            display: inline-flex;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.2rem;
+            border-radius: 999px;
+        }
+
+        .lang-switch button {
+            border: none;
+            background: transparent;
+            color: var(--muted);
+            font-weight: 600;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+
+        .lang-switch button.active {
+            background: var(--accent);
+            color: #05060a;
+        }
+
+        main {
+            padding-bottom: 4rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: clamp(1.25rem, 2vw, 1.75rem);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: clamp(1.25rem, 3vw, 1.6rem);
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            color: var(--accent-strong);
+            margin-top: 1.25rem;
+            margin-bottom: 0.35rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin: 0.6rem 0;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(240, 198, 116, 0.4);
+        }
+
+        a:hover {
+            color: var(--accent-strong);
+            border-color: rgba(255, 213, 74, 0.6);
+        }
+
+        .disclaimer {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-top: 1rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(5, 6, 10, 0.9);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.25rem;
+            }
+
+            ul {
+                padding-left: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Политика конфиденциальности — SpacePath</h1>
-    <section>
-        <h2>Собираемые данные</h2>
-        <ul>
-            <li>Дата рождения и знак зодиака (для персонализации гороскопов)</li>
-            <li>Настройки приложения и записи дневника, которые вы сохраняете</li>
-            <li>Анонимные события использования (Firebase Analytics) и идентификаторы устройств для рекламы (Google AdMob)</li>
-        </ul>
-    </section>
+    <header>
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <div>
+                <div class="badge">☄️ SpacePath</div>
+                <h1 data-lang="ru">Политика конфиденциальности</h1>
+                <h1 data-lang="en" style="display:none;">Privacy Policy</h1>
+                <p class="subtitle" data-lang="ru">Прозрачность — наш первый экран.</p>
+                <p class="subtitle" data-lang="en" style="display:none;">Transparency is our first screen.</p>
+                <p class="subtitle" style="margin: 0;">
+                    <span data-lang="ru">Дата обновления: 07.02.2026</span>
+                    <span data-lang="en" style="display:none;">Last updated: Feb 7, 2026</span>
+                </p>
+            </div>
+            <div class="lang-switch">
+                <button class="active" data-switch="ru">RU</button>
+                <button data-switch="en">EN</button>
+            </div>
+        </div>
+    </header>
 
-    <section>
-        <h2>Как мы используем данные</h2>
-        <ul>
-            <li>Генерация персональных гороскопов с помощью AI (Google Gemini)</li>
-            <li>Синхронизация дневника и пользовательских настроек между устройствами (Firebase Auth/Firestore)</li>
-            <li>Показы релевантной рекламы и аналитика производительности приложения</li>
-        </ul>
-    </section>
+    <main>
+        <div class="container">
+            <section class="card" id="data">
+                <h2 data-lang="ru">Что мы собираем</h2>
+                <h2 data-lang="en" style="display:none;">What we collect</h2>
+                <ul>
+                    <li data-lang="ru"><span class="highlight">Базовые данные профиля:</span> e-mail Google, аватар и имя (если вы авторизовались)</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Basic profile:</span> Google e-mail, avatar, display name (if you signed in)</li>
 
-    <section>
-        <h2>Передача третьим лицам</h2>
-        <ul>
-            <li>Мы не продаём и не передаём персональные данные сторонним компаниям</li>
-            <li>Gemini получает только необходимый контент для ответа внутри приложения</li>
-            <li>AdMob и Firebase получают технические данные согласно их политикам</li>
-        </ul>
-    </section>
+                    <li data-lang="ru"><span class="highlight">Дата рождения и знак:</span> используются только для расчёта гороскопов и не покидают Firebase</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Birth date & zodiac:</span> used solely inside Firebase to compute horoscopes</li>
 
-    <section>
-        <h2>Хранение и безопасность</h2>
-        <p>Данные хранятся в Firebase под вашей учётной записью. Мы используем стандартные механизмы шифрования Google Cloud, а доступ защищён авторизацией Firebase.</p>
-    </section>
+                    <li data-lang="ru"><span class="highlight">Записи дневника и настройки:</span> сохраняются под вашей учётной записью</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Journal & preferences:</span> stored under your account in Firebase</li>
 
-    <section>
-        <h2>Удаление аккаунта</h2>
-        <h3>1. Через приложение (рекомендуется)</h3>
-        <ul>
-            <li>Откройте SpacePath → «Настройки» или «Хаб» → «Удалить аккаунт»</li>
-            <li>Подтвердите действие; данные авторизации, дневник и архивы удаляются мгновенно</li>
-        </ul>
-        <h3>2. Через почту (если приложение удалено)</h3>
-        <ul>
-            <li>Напишите на <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a> с темой «Account Deletion Request»</li>
-            <li>Укажите e-mail, привязанный к аккаунту; мы удалим все данные в течение 30 дней</li>
-        </ul>
-        <p><strong>Без возможности восстановления:</strong> после удаления дневник, трекинг настроения и профиль полностью стираются из Firestore.</p>
-    </section>
+                    <li data-lang="ru"><span class="highlight">Анонимные события использования:</span> экран, кнопка, попытки Oracle, открытие/пересоздание карты дня, нажатия «Сохранить»/«Поделиться», факт покупки, просмотр рекламы, язык и платформа устройства</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Anonymous usage events:</span> screen + button taps, Oracle attempts, daily card opens/regenerations, save/share actions, purchase facts, ad views, device language & platform</li>
 
-    <section>
-        <h2>Контакты</h2>
-        <p>Вопросы по конфиденциальности: <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a></p>
-        <p>Дата обновления: 06.02.2026</p>
-    </section>
+                    <li data-lang="ru"><span class="highlight">Рекламные идентификаторы:</span> передаются только AdMob, чтобы показать релевантный баннер</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Advertising IDs:</span> shared only with AdMob for relevant banners</li>
+                </ul>
+            </section>
 
-    <hr>
+            <section class="card" id="usage">
+                <h2 data-lang="ru">Как мы используем данные</h2>
+                <h2 data-lang="en" style="display:none;">How we use data</h2>
+                <ul>
+                    <li data-lang="ru">Формируем прогнозы через Google Gemini и локальные калькуляторы (данные дневника не отправляются в Gemini)</li>
+                    <li data-lang="en" style="display:none;">Generate predictions with Google Gemini + local calculators (journal text never goes to Gemini)</li>
 
-    <h1>Privacy Policy — SpacePath</h1>
-    <section>
-        <h2>Data We Collect</h2>
-        <ul>
-            <li>Date of birth and zodiac sign (to personalize horoscopes)</li>
-            <li>App preferences and journal entries that you save</li>
-            <li>Anonymous usage events (Firebase Analytics) and advertising identifiers (Google AdMob)</li>
-        </ul>
-    </section>
+                    <li data-lang="ru">Синхронизируем дневник, покупки и темы между устройствами через Firebase Auth/Firestore</li>
+                    <li data-lang="en" style="display:none;">Sync journal, purchases, themes via Firebase Auth/Firestore</li>
 
-    <section>
-        <h2>How We Use the Data</h2>
-        <ul>
-            <li>Generate personalized horoscopes with AI (Google Gemini)</li>
-            <li>Sync your journal and settings across devices via Firebase Auth/Firestore</li>
-            <li>Serve relevant ads and measure app performance</li>
-        </ul>
-    </section>
+                    <li data-lang="ru">Отслеживаем обезличенные события (Firebase Analytics) для улучшения интерфейса</li>
+                    <li data-lang="en" style="display:none;">Track anonymous events (Firebase Analytics) to refine UX</li>
 
-    <section>
-        <h2>Sharing with Third Parties</h2>
-        <ul>
-            <li>We do not sell or rent your personal information</li>
-            <li>Gemini receives only the text required to answer inside the app</li>
-            <li>AdMob and Firebase access technical data under their own privacy terms</li>
-        </ul>
-    </section>
+                    <li data-lang="ru">Показываем рекламу Google AdMob и фиксируем только факт просмотра</li>
+                    <li data-lang="en" style="display:none;">Serve Google AdMob ads and log view/impression only</li>
+                </ul>
+            </section>
 
-    <section>
-        <h2>Storage & Security</h2>
-        <p>Your data is stored in Firebase under your account. We rely on Google Cloud encryption at rest/in transit, and access is protected by Firebase authentication.</p>
-    </section>
+            <section class="card" id="sharing">
+                <h2 data-lang="ru">Передача третьим лицам</h2>
+                <h2 data-lang="en" style="display:none;">Sharing with third parties</h2>
+                <ul>
+                    <li data-lang="ru">Мы не продаём и не сдаём ваши данные в аренду</li>
+                    <li data-lang="en" style="display:none;">We never sell or rent your data</li>
 
-    <section id="account-deletion">
-        <h2>Account Deletion</h2>
-        <h3>1. In-app (recommended)</h3>
-        <ul>
-            <li>Open SpacePath → “Settings” or “Hub” → “Delete account”</li>
-            <li>Confirm to instantly remove credentials, journal entries, and archives</li>
-        </ul>
-        <h3>2. Via e-mail (if the app is removed)</h3>
-        <ul>
-            <li>Send an email to <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a> with the subject “Account Deletion Request”</li>
-            <li>Include the e-mail linked to your account; we purge all data within 30 days</li>
-        </ul>
-        <p><strong>No recovery:</strong> once deleted, your journal, mood tracking, and profile data are permanently erased from Firestore.</p>
-    </section>
+                    <li data-lang="ru">Gemini получает только обезличенный контекст вопроса (без e-mail и дневника)</li>
+                    <li data-lang="en" style="display:none;">Gemini receives only anonymized prompts (no email, no journal)</li>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Privacy inquiries: <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a></p>
-        <p>Last updated: Feb 6, 2026</p>
-    </section>
+                    <li data-lang="ru">Firebase и AdMob обрабатывают технические метаданные по собственным политикам</li>
+                    <li data-lang="en" style="display:none;">Firebase & AdMob handle technical metadata under their policies</li>
+                </ul>
+            </section>
+
+            <section class="card" id="security">
+                <h2 data-lang="ru">Хранение и безопасность</h2>
+                <h2 data-lang="en" style="display:none;">Storage & security</h2>
+                <p data-lang="ru">Данные лежат в инфраструктуре Google Cloud (Firebase). Шифрование действует при передаче и хранении, доступ ограничен авторизацией Firebase.</p>
+                <p data-lang="en" style="display:none;">We store everything in Google Cloud (Firebase). Encryption at rest/in transit + Firebase Auth guard the access.</p>
+                <p class="disclaimer" data-lang="ru">SpacePath не собирает биометрию, геолокацию и контактную книгу. Мы работаем только с теми данными, которые нужны для гороскопов, дневника и аналитики.</p>
+                <p class="disclaimer" data-lang="en" style="display:none;">SpacePath does not collect biometrics, GPS location, or contact list. We only process what’s necessary for horoscopes, journal, and analytics.</p>
+            </section>
+
+            <section class="card" id="deletion">
+                <h2 data-lang="ru">Удаление аккаунта</h2>
+                <h2 data-lang="en" style="display:none;">Account deletion</h2>
+                <h3 data-lang="ru">1. Через приложение</h3>
+                <h3 data-lang="en" style="display:none;">1. In-app</h3>
+                <ul>
+                    <li data-lang="ru">SpacePath → профиль/хаб → «Удалить аккаунт» → подтверждение</li>
+                    <li data-lang="en" style="display:none;">SpacePath → profile/hub → “Delete account” → confirm</li>
+                    <li data-lang="ru">Данные удаляются из Firebase сразу и без восстановления</li>
+                    <li data-lang="en" style="display:none;">Data is deleted from Firebase instantly without recovery</li>
+                </ul>
+
+                <h3 data-lang="ru">2. Через письмо</h3>
+                <h3 data-lang="en" style="display:none;">2. Via e-mail</h3>
+                <ul>
+                    <li data-lang="ru">Письмо на <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a> с темой «Account Deletion Request»</li>
+                    <li data-lang="en" style="display:none;">Email <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a> (subject: “Account Deletion Request”)</li>
+                    <li data-lang="ru">Укажите e-mail, привязанный к аккаунту — удалим всё в течение 30 дней</li>
+                    <li data-lang="en" style="display:none;">Provide the Google e-mail bound to SpacePath — we purge everything within 30 days</li>
+                </ul>
+                <p class="disclaimer" data-lang="ru"><strong>Без отката:</strong> дневник, статистика и архивы стираются полностью.</p>
+                <p class="disclaimer" data-lang="en" style="display:none;"><strong>No rollback:</strong> journal, stats, archives are permanently erased.</p>
+            </section>
+
+            <section class="card" id="contact">
+                <h2 data-lang="ru">Контакты</h2>
+                <h2 data-lang="en" style="display:none;">Contact</h2>
+                <p data-lang="ru">Вопросы по приватности: <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a></p>
+                <p data-lang="en" style="display:none;">Privacy questions: <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">© 2026 SpacePath. Built for mindful space travelers.</div>
+    </footer>
+
+    <script>
+        const switchers = document.querySelectorAll('[data-switch]');
+        const langBlocks = document.querySelectorAll('[data-lang]');
+        let currentLang = 'ru';
+
+        const setLang = lang => {
+            currentLang = lang;
+            langBlocks.forEach(block => {
+                block.style.display = block.dataset.lang === lang ? '' : 'none';
+            });
+            switchers.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.switch === lang);
+            });
+            document.documentElement.lang = lang;
+        };
+
+        switchers.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.switch)));
+    </script>
 </body>
 </html>
