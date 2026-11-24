@@ -170,11 +170,11 @@
                 <div class="badge">☄️ SpacePath</div>
                 <h1 data-lang="ru">Политика конфиденциальности</h1>
                 <h1 data-lang="en" style="display:none;">Privacy Policy</h1>
-                <p class="subtitle" data-lang="ru">Прозрачность — наш первый экран.</p>
-                <p class="subtitle" data-lang="en" style="display:none;">Transparency is our first screen.</p>
+                <p class="subtitle" data-lang="ru">Без регистрации. Всё личное остаётся на вашем телефоне.</p>
+                <p class="subtitle" data-lang="en" style="display:none;">No sign-up. Everything personal stays on your phone.</p>
                 <p class="subtitle" style="margin: 0;">
-                    <span data-lang="ru">Дата обновления: 07.02.2026</span>
-                    <span data-lang="en" style="display:none;">Last updated: Feb 7, 2026</span>
+                    <span data-lang="ru">Дата обновления: 24.11.2026</span>
+                    <span data-lang="en" style="display:none;">Last updated: Nov 24, 2026</span>
                 </p>
             </div>
             <div class="lang-switch">
@@ -186,91 +186,88 @@
 
     <main>
         <div class="container">
-            <section class="card" id="data">
-                <h2 data-lang="ru">Что мы собираем</h2>
-                <h2 data-lang="en" style="display:none;">What we collect</h2>
+            <section class="card" id="short">
+                <h2 data-lang="ru">Коротко</h2>
+                <h2 data-lang="en" style="display:none;">In short</h2>
                 <ul>
-                    <li data-lang="ru"><span class="highlight">Базовые данные профиля:</span> e-mail Google, аватар и имя (если вы авторизовались)</li>
-                    <li data-lang="en" style="display:none;"><span class="highlight">Basic profile:</span> Google e-mail, avatar, display name (if you signed in)</li>
+                    <li data-lang="ru">В SpacePath нет регистрации и входа в аккаунт — мы не знаем ни вашего имени, ни почты.</li>
+                    <li data-lang="en" style="display:none;">SpacePath has no sign-up or login — we don't know your name or e-mail.</li>
 
-                    <li data-lang="ru"><span class="highlight">Дата рождения и знак:</span> используются только для расчёта гороскопов и не покидают Firebase</li>
-                    <li data-lang="en" style="display:none;"><span class="highlight">Birth date & zodiac:</span> used solely inside Firebase to compute horoscopes</li>
+                    <li data-lang="ru">Дата рождения, дневник и настройки хранятся только на вашем телефоне и никуда не отправляются.</li>
+                    <li data-lang="en" style="display:none;">Your birth date, journal and settings are stored only on your phone and are never sent anywhere.</li>
 
-                    <li data-lang="ru"><span class="highlight">Записи дневника и настройки:</span> сохраняются под вашей учётной записью</li>
-                    <li data-lang="en" style="display:none;"><span class="highlight">Journal & preferences:</span> stored under your account in Firebase</li>
+                    <li data-lang="ru">Гороскопы, ответы Оракула и расчёты неба делаются прямо в телефоне, без искусственного интеллекта и без отправки ваших вопросов.</li>
+                    <li data-lang="en" style="display:none;">Horoscopes, Oracle answers and sky calculations are made on the phone itself — no AI, your questions are never sent.</li>
 
-                    <li data-lang="ru"><span class="highlight">Анонимные события использования:</span> экран, кнопка, попытки Oracle, открытие/пересоздание карты дня, нажатия «Сохранить»/«Поделиться», факт покупки, просмотр рекламы, язык и платформа устройства</li>
-                    <li data-lang="en" style="display:none;"><span class="highlight">Anonymous usage events:</span> screen + button taps, Oracle attempts, daily card opens/regenerations, save/share actions, purchase facts, ad views, device language & platform</li>
-
-                    <li data-lang="ru"><span class="highlight">Рекламные идентификаторы:</span> передаются только AdMob, чтобы показать релевантный баннер</li>
-                    <li data-lang="en" style="display:none;"><span class="highlight">Advertising IDs:</span> shared only with AdMob for relevant banners</li>
+                    <li data-lang="ru">Приложение бесплатное, покупок внутри нет. Оно живёт за счёт рекламы Google AdMob.</li>
+                    <li data-lang="en" style="display:none;">The app is free, with no in-app purchases. It is supported by Google AdMob ads.</li>
                 </ul>
             </section>
 
-            <section class="card" id="usage">
-                <h2 data-lang="ru">Как мы используем данные</h2>
-                <h2 data-lang="en" style="display:none;">How we use data</h2>
+            <section class="card" id="device">
+                <h2 data-lang="ru">Что хранится на телефоне</h2>
+                <h2 data-lang="en" style="display:none;">What is stored on your phone</h2>
                 <ul>
-                    <li data-lang="ru">Формируем прогнозы через Google Gemini и локальные калькуляторы (данные дневника не отправляются в Gemini)</li>
-                    <li data-lang="en" style="display:none;">Generate predictions with Google Gemini + local calculators (journal text never goes to Gemini)</li>
+                    <li data-lang="ru"><span class="highlight">Дата рождения</span> и рассчитанные по ней знак и числа — для гороскопов и «Космического кода»</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Birth date</span> and the sign and numbers calculated from it — for horoscopes and the Cosmic Code</li>
 
-                    <li data-lang="ru">Синхронизируем дневник, покупки и темы между устройствами через Firebase Auth/Firestore</li>
-                    <li data-lang="en" style="display:none;">Sync journal, purchases, themes via Firebase Auth/Firestore</li>
+                    <li data-lang="ru"><span class="highlight">Записи дневника</span> и избранные даты</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Journal entries</span> and favourite dates</li>
 
-                    <li data-lang="ru">Отслеживаем обезличенные события (Firebase Analytics) для улучшения интерфейса</li>
-                    <li data-lang="en" style="display:none;">Track anonymous events (Firebase Analytics) to refine UX</li>
-
-                    <li data-lang="ru">Показываем рекламу Google AdMob и фиксируем только факт просмотра</li>
-                    <li data-lang="en" style="display:none;">Serve Google AdMob ads and log view/impression only</li>
+                    <li data-lang="ru"><span class="highlight">Настройки:</span> язык, собранные карты альбома, последний прогноз магнитных бурь для виджета</li>
+                    <li data-lang="en" style="display:none;"><span class="highlight">Settings:</span> language, collected album cards, the latest magnetic storm forecast for the widget</li>
                 </ul>
+                <p class="disclaimer" data-lang="ru">Эти данные не покидают устройство. У нас нет сервера, на котором они могли бы храниться.</p>
+                <p class="disclaimer" data-lang="en" style="display:none;">This data never leaves your device. We have no server where it could be stored.</p>
             </section>
 
-            <section class="card" id="sharing">
-                <h2 data-lang="ru">Передача третьим лицам</h2>
-                <h2 data-lang="en" style="display:none;">Sharing with third parties</h2>
-                <ul>
-                    <li data-lang="ru">Мы не продаём и не сдаём ваши данные в аренду</li>
-                    <li data-lang="en" style="display:none;">We never sell or rent your data</li>
+            <section class="card" id="network">
+                <h2 data-lang="ru">Что уходит из телефона</h2>
+                <h2 data-lang="en" style="display:none;">What leaves your phone</h2>
 
-                    <li data-lang="ru">Gemini получает только обезличенный контекст вопроса (без e-mail и дневника)</li>
-                    <li data-lang="en" style="display:none;">Gemini receives only anonymized prompts (no email, no journal)</li>
+                <h3 data-lang="ru">Google Firebase Analytics</h3>
+                <h3 data-lang="en" style="display:none;">Google Firebase Analytics</h3>
+                <p data-lang="ru">Обезличенная статистика: какие экраны открывались, нажатия (например, «Поделиться», вопрос Оракулу, добавление виджета), язык, модель и версия системы устройства, примерная страна, случайный идентификатор установки. Мы не передаём дату рождения, тексты дневника и вопросы. Статистика нужна, чтобы понимать, чем люди пользуются, и улучшать приложение.</p>
+                <p data-lang="en" style="display:none;">Anonymous statistics: which screens were opened, taps (e.g. “Share”, asking the Oracle, adding the widget), language, device model and OS version, approximate country, a random installation ID. We never send your birth date, journal texts or questions. We use it to understand what people use and to improve the app.</p>
 
-                    <li data-lang="ru">Firebase и AdMob обрабатывают технические метаданные по собственным политикам</li>
-                    <li data-lang="en" style="display:none;">Firebase & AdMob handle technical metadata under their policies</li>
-                </ul>
+                <h3 data-lang="ru">Google AdMob</h3>
+                <h3 data-lang="en" style="display:none;">Google AdMob</h3>
+                <p data-lang="ru">Показывает рекламу и использует рекламный идентификатор устройства. Его можно сбросить или отключить персонализацию в настройках Android: «Google» → «Реклама».</p>
+                <p data-lang="en" style="display:none;">Shows ads and uses the device advertising ID. You can reset it or opt out of personalised ads in Android settings: “Google” → “Ads”.</p>
+
+                <h3 data-lang="ru">Прогноз магнитных бурь (NOAA)</h3>
+                <h3 data-lang="en" style="display:none;">Magnetic storm forecast (NOAA)</h3>
+                <p data-lang="ru">Приложение и виджет скачивают общий прогноз с сайта Службы космической погоды США. Никаких данных о вас при этом не передаётся.</p>
+                <p data-lang="en" style="display:none;">The app and widget download the public forecast from the US Space Weather Prediction Center. No data about you is sent.</p>
+
+                <p class="disclaimer" data-lang="ru">Google обрабатывает эти данные по своей <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">политике конфиденциальности</a>. Мы не продаём и никому не передаём данные.</p>
+                <p class="disclaimer" data-lang="en" style="display:none;">Google processes this data under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>. We never sell or share data.</p>
             </section>
 
-            <section class="card" id="security">
-                <h2 data-lang="ru">Хранение и безопасность</h2>
-                <h2 data-lang="en" style="display:none;">Storage & security</h2>
-                <p data-lang="ru">Данные лежат в инфраструктуре Google Cloud (Firebase). Шифрование действует при передаче и хранении, доступ ограничен авторизацией Firebase.</p>
-                <p data-lang="en" style="display:none;">We store everything in Google Cloud (Firebase). Encryption at rest/in transit + Firebase Auth guard the access.</p>
-                <p class="disclaimer" data-lang="ru">SpacePath не собирает биометрию, геолокацию и контактную книгу. Мы работаем только с теми данными, которые нужны для гороскопов, дневника и аналитики.</p>
-                <p class="disclaimer" data-lang="en" style="display:none;">SpacePath does not collect biometrics, GPS location, or contact list. We only process what’s necessary for horoscopes, journal, and analytics.</p>
+            <section class="card" id="share">
+                <h2 data-lang="ru">Кнопки «Поделиться»</h2>
+                <h2 data-lang="en" style="display:none;">“Share” buttons</h2>
+                <p data-lang="ru">Когда вы делитесь ответом Оракула, космическим кодом или картой дня, текст или картинка уходят только в то приложение, которое вы сами выбрали. Мы их не получаем.</p>
+                <p data-lang="en" style="display:none;">When you share an Oracle answer, your Cosmic Code or a daily card, the text or image goes only to the app you choose. We don't receive it.</p>
+            </section>
+
+            <section class="card" id="not">
+                <h2 data-lang="ru">Чего мы не собираем</h2>
+                <h2 data-lang="en" style="display:none;">What we don't collect</h2>
+                <p data-lang="ru">Имя, почту, телефон, местоположение, контакты, фото, доступ к камере и микрофону, платёжные данные.</p>
+                <p data-lang="en" style="display:none;">Name, e-mail, phone number, location, contacts, photos, camera or microphone access, payment details.</p>
             </section>
 
             <section class="card" id="deletion">
-                <h2 data-lang="ru">Удаление аккаунта</h2>
-                <h2 data-lang="en" style="display:none;">Account deletion</h2>
-                <h3 data-lang="ru">1. Через приложение</h3>
-                <h3 data-lang="en" style="display:none;">1. In-app</h3>
+                <h2 data-lang="ru">Как удалить данные</h2>
+                <h2 data-lang="en" style="display:none;">How to delete your data</h2>
                 <ul>
-                    <li data-lang="ru">SpacePath → профиль/хаб → «Удалить аккаунт» → подтверждение</li>
-                    <li data-lang="en" style="display:none;">SpacePath → profile/hub → “Delete account” → confirm</li>
-                    <li data-lang="ru">Данные удаляются из Firebase сразу и без восстановления</li>
-                    <li data-lang="en" style="display:none;">Data is deleted from Firebase instantly without recovery</li>
-                </ul>
+                    <li data-lang="ru">Удалите приложение или нажмите «Очистить данные» в настройках Android (Приложения → SpacePath → Хранилище) — всё, что хранилось на телефоне, исчезнет сразу.</li>
+                    <li data-lang="en" style="display:none;">Uninstall the app or tap “Clear data” in Android settings (Apps → SpacePath → Storage) — everything stored on the phone is erased at once.</li>
 
-                <h3 data-lang="ru">2. Через письмо</h3>
-                <h3 data-lang="en" style="display:none;">2. Via e-mail</h3>
-                <ul>
-                    <li data-lang="ru">Письмо на <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a> с темой «Account Deletion Request»</li>
-                    <li data-lang="en" style="display:none;">Email <a href="mailto:nomadpathru@gmail.com">nomadpathru@gmail.com</a> (subject: “Account Deletion Request”)</li>
-                    <li data-lang="ru">Укажите e-mail, привязанный к аккаунту — удалим всё в течение 30 дней</li>
-                    <li data-lang="en" style="display:none;">Provide the Google e-mail bound to SpacePath — we purge everything within 30 days</li>
+                    <li data-lang="ru">Аккаунта нет, поэтому удалять на нашей стороне нечего. Обезличенная статистика хранится в Google и удаляется автоматически по сроку хранения.</li>
+                    <li data-lang="en" style="display:none;">There is no account, so there is nothing to delete on our side. Anonymous statistics are kept by Google and deleted automatically when the retention period ends.</li>
                 </ul>
-                <p class="disclaimer" data-lang="ru"><strong>Без отката:</strong> дневник, статистика и архивы стираются полностью.</p>
-                <p class="disclaimer" data-lang="en" style="display:none;"><strong>No rollback:</strong> journal, stats, archives are permanently erased.</p>
             </section>
 
             <section class="card" id="contact">
